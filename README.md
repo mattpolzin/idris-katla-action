@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: mattpolzin/idris-katla-action@0.1.0
+    - uses: mattpolzin/idris-katla-action@0.1.1
       with:
         MARKDOWN_PATH: md/
         HTML_PATH: html/
@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: mattpolzin/idris-katla-action@0.1.0
+    - uses: mattpolzin/idris-katla-action@0.1.1
       with:
         MARKDOWN_PATH: md/
         HTML_PATH: html/
