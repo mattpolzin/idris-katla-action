@@ -2,7 +2,6 @@
 # fail if any commands fails
 set -e
 
-
 ##
 ## INPUTS
 ## - $INPUT_MARKDOWN_PATH - './' by default. The location from which all Markdown files will be read in.
@@ -16,6 +15,7 @@ MARKDOWN_PATH="${INPUT_MARKDOWN_PATH:-./}"
 
 HTML_PATH=${INPUT_HTML_PATH:-./html}
 
+echo "here"
 echo "$(ls)"
 cd "$MARKDOWN_PATH"
 
