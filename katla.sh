@@ -15,16 +15,12 @@ MARKDOWN_PATH="${INPUT_MARKDOWN_PATH:-./}"
 
 HTML_PATH=${INPUT_HTML_PATH:-./html}
 
-echo "here"
-echo "$(ls)"
-cd "$MARKDOWN_PATH"
-
-find source -name "*.md" >tmp
+find "${MARKDOWN_PATH}" -name "*.md" >tmp
  while IFS= read -r rawfile; do
      file=$(echo "$rawfile" | sed "s|source/\(.*\)|\1|")
      filename=$(basename "$file" ".md")
      filedir=$(dirname "$file")
-     htmldir="$HTML_PATH/${filedir}"
+     htmldir="${HTML_PATH}/${filedir}"
      mdfile="${htmldir}/${filename}.md"
      htmlfile="${htmldir}/${filename}.html"
      mkdir -p "${htmldir}"
