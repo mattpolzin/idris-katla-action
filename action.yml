@@ -1,0 +1,19 @@
+name: idris-katla-action
+description: Runs Katla to generate a web page from a given folder's Markdown/Idris files.
+author: Mathew Polzin
+inputs:
+  MARKDOWN_PATH:
+    description: 'The location of the Markdown files to run Katla against.'
+    required: false
+    default: './'
+  HTML_PATH:
+    description: 'The location where the output HTML files should be saved.'
+    required: false
+    default: './html'
+outputs: {}
+branding:
+  color: yellow
+  icon: book
+runs:
+  using: docker
+  image: Dockerfile
