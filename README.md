@@ -23,3 +23,23 @@ Inputs:
 Outputs:
 N/A
 
+## Full Example
+Now that you've got HTML, you might also want to publish it to your gh-page for the repo.
+
+Here's a full workflow for that:
+```yaml
+jobs:
+  html:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: mattpolzin/idris-katla-action@0.1.0
+      with:
+        MARKDOWN_PATH: md/
+        HTML_PATH: html/
+    - uses: JamesIves/github-pages-deploy-action@4.1.3
+      with:
+        branch: gh-pages
+        folder: html/
+        git-config-name: Github Actions
+```
+

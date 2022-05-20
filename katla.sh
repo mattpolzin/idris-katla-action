@@ -16,6 +16,7 @@ MARKDOWN_PATH="${INPUT_MARKDOWN_PATH:-./}"
 
 HTML_PATH=${INPUT_HTML_PATH:-./html}
 
+echo "$(ls)"
 cd "$MARKDOWN_PATH"
 
 find source -name "*.md" >tmp
