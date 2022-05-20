@@ -2,7 +2,7 @@
 
 A small wrapper that runs Katla against all Markdown Literate-Idris files in a given directory and then converts to HTML.
 
-Credit goes to @gallias for the setup used in this action.
+Credit goes to @gallais for the setup used in this action.
 
 For example,
 ```yaml
