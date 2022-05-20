@@ -25,7 +25,7 @@ find "${MARKDOWN_PATH}" -name "*.md" >tmp
      htmlfile="${htmldir}/${filename}.html"
      mkdir -p "${htmldir}"
      idris2 -c "${rawfile}"
-     katla markdown "$rawfile" "build/ttc/source/${filename}.ttm" >"$mdfile"
+     katla markdown "$rawfile" "build/ttc/source/${MARKDOWN_PATH}/${filename}.ttm" >"$mdfile"
      markdown "$mdfile" >"$htmlfile"
  done <tmp
  rm tmp
